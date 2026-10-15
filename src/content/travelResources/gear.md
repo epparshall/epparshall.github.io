@@ -21,4 +21,4 @@ A simple but high-quality travel backpack that makes one-bag travel actually com
 
 If you’re trying to travel light, this makes it very easy. The hip support alone is the reason I’d pick it again. It turns a fully loaded bag into something you can actually move around with comfortably.
 
-[View on Amazon](https://www.amazon.com/dp/B09KQ2VJCW?ref=ppx_pop_mob_ap_share&th=1)
+[View on Amazon](https://www.amazon.com/dp/B09KQ2VJCW)

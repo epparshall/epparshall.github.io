@@ -18,3 +18,5 @@ When I travel, I usually pack Clif Bars (or similar energy bars) in every compar
 ### Small downsides to be aware of
 - They’re not a full substitute for real meals, just a backup.
 - In hot climates, they can get a bit soft or messy (still edible, just less ideal).
+
+[View Clif Bar variety packs on Amazon](https://www.amazon.com/s?k=clif+bar+variety+pack)

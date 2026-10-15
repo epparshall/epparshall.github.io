@@ -22,3 +22,5 @@ When I travel, I prefer shoes like Adidas Ultraboost or Pureboost-style running 
 ### Practical takeaway
 
 If you’re choosing between casual sneakers and proper running shoes for a trip, running shoes almost always win for comfort. It’s one of those upgrades you only fully appreciate after a full day of walking through airports and cities.
+
+[View Adidas Ultraboost on Amazon](https://www.amazon.com/s?k=adidas+ultraboost+running+shoes)

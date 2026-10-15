@@ -23,4 +23,4 @@ I always pack a compact microfiber towel because it takes up almost no space but
 
 A microfiber towel is less about comfort and more about flexibility. It removes friction from travel situations where you might otherwise be stuck waiting for laundry, paying for towels, or just feeling uncomfortable after a long day.
 
-[View on Amazon](https://www.amazon.com/dp/B07VVNJMRG?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)
+[View on Amazon](https://www.amazon.com/dp/B07VVNJMRG)

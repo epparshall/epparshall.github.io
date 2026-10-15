@@ -14,7 +14,7 @@ For international travel, Jetpac eSIM has been one of the best value options Iâ€
 ### Coupons and referral discounts (worth checking)
 
 Jetpac regularly has promotions, but theyâ€™re not always advertised directly in-app. Before you buy, it is worth checking:
-- **[Jetpac official referral page](https://www.jetpacglobal.com/en/refer/):** Often includes a $5 credit or similar fixed discount.
+- **[My Jetpac referral link](https://www.jetpacglobal.com/refer/?utm_source=referral_program&utm_medium=referral&referred=EVAUADOS):** Gets you a credit or discount on your first eSIM (and gives me a small credit too).
 - **Coupon aggregator sites:** Sites like [wethrift.com/jetpac](https://www.wethrift.com/jetpac) often list promo codes ranging from 10% to 25% off.
 
 ### Important limitation (this matters)

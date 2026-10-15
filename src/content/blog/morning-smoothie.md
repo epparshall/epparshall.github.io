@@ -13,7 +13,7 @@ It is a vehicle for nutrients that would otherwise be hard to get. Over a year's
 
 A big handful of dark greens: spinach, kale, arugula, or whatever's in the fridge. I rotate them on purpose. Different greens have different nutrient profiles, and rotating keeps me from over-loading on any single one. Kale, for example, is loaded with vitamin K.
 
-The greens are the only ingredient that make people hesitate, but with the berries in the mix you almost cannot taste them. Unless you put in too much arugula, in which case you will get an aftertaste.
+The greens are the only ingredient that makes people hesitate, but with the berries in the mix you almost cannot taste them. Unless you put in too much arugula, in which case you will get an aftertaste.
 
 If you do not want to pick up fresh greens every week, frozen greens are a fine substitute and keep for a long time. They are also a good backup for the mornings when you have run out of fresh and do not want to break the habit. The smoothie ends up being a little colder, so beware of brainfreeze with this substitute.
 
@@ -37,7 +37,7 @@ This is the part where I'd lose people if I tried to feed it to them on a plate.
 
 **Wheat germ.** A spoonful. It's the most nutrient-dense part of the wheat kernel, the part that gets discarded in white flour. B vitamins, vitamin E, magnesium, zinc. It is also one of the richest food sources of spermidine, a compound that has been getting attention in longevity research for triggering autophagy, which is your cells' own cleanup-and-recycle process.
 
-**Amla berry powder.** Indian gooseberry, an Ayurvedic staple. Extraordinarily high in vitamin C and polyphenols, and one of the most antioxidant-dense foods on the planet by ORAC value. (ORAC stands for Oxygen Radical Absorbance Capacity, a lab measure of how aggressively a food's antioxidants neutralize free radicals.) I picked it up after reading about it in the context of longevity research and never stopped using it. It can be hard to find in regular grocery stores, so I order it on Amazon.
+**Amla berry powder.** Indian gooseberry, an Ayurvedic staple. Extraordinarily high in vitamin C and polyphenols, and one of the most antioxidant-dense foods on the planet by ORAC value. (ORAC stands for Oxygen Radical Absorbance Capacity, a lab measure of how aggressively a food's antioxidants neutralize free radicals.) I picked it up after reading about it in the context of longevity research and never stopped using it. It can be hard to find in regular grocery stores, so I [order it on Amazon](https://www.amazon.com/dp/B07WNKF1S1) (Jiva Organics, organic, in a 1.25 lb bag that lasts a long time).
 
 **Dried cranberries, reduced sugar.** A small handful. Urinary tract benefits, polyphenols, and a little tartness to balance the smoothie's sweetness.
 
@@ -55,7 +55,7 @@ A quick word on estrogen, because someone always brings it up. Soy contains phyt
 
 ## How To Make It
 
-I use a NutriBullet. If you've never used one: you load the cup, screw the blade onto the top, then flip the whole thing upside-down to blend. Whatever you put in last ends up closest to the blade, which is the opposite of how you'd load a normal blender. The order matters.
+I use a [NutriBullet Pro](https://www.amazon.com/dp/B0FRH7FG25), the 900 watt model that comes with the 32 oz cup and the flip-top travel lid. If you've never used one: you load the cup, screw the blade onto the top, then flip the whole thing upside-down to blend. Whatever you put in last ends up closest to the blade, which is the opposite of how you'd load a normal blender. The order matters.
 
 Here's the order:
 
@@ -99,7 +99,7 @@ A serving of non-organic soy milk contains a small enough amount of glyphosate t
 
 **Bananas.** Bananas are on the Clean Fifteen, the lowest-residue list. The peel does a lot of work. Not worth the premium in my opinion.
 
-**Turmeric.** Lead is the concern with turmeric. It comes from soil contamination and intentional adulteration in lower-quality supply chains by using lead chromate as a coloring agent. Organic certification does not test for heavy metals, so it does not consistently solve this. The good news from the same Consumer Reports investigation: McCormick, Simply Organic, Great Value (Walmart), Spice Islands, and Morton & Bassett all landed in the "no concern" or "some concern" categories for turmeric. A brand called La Flor was rated "high concern."
+**Turmeric.** Lead is the concern with turmeric. It comes from soil contamination and intentional adulteration in lower-quality supply chains by using lead chromate as a coloring agent. Organic certification does not test for heavy metals, so it does not consistently solve this. The good news from a Consumer Reports investigation into heavy metals in spices: McCormick, Simply Organic, Great Value (Walmart), Spice Islands, and Morton & Bassett all landed in the "no concern" or "some concern" categories for turmeric. A brand called La Flor was rated "high concern."
 
 A broader rule: if you are buying turmeric at a regular grocery store from a major brand, you are probably fine. If you are buying off Amazon or from a brand you have never heard of, be more careful. A 2021 industry test of 23 turmeric supplements from Amazon found heavy metal levels averaging more than five times higher than a control sample, with the worst offenders more than 20x California's lead limits.
 
