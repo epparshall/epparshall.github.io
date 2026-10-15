@@ -27,6 +27,9 @@ function renameFootnoteLabel() {
 export default defineConfig({
   site: 'https://epparshall.github.io',
   base: '/',
+  redirects: {
+    '/publications': '/work',
+  },
   integrations: [sitemap()],
   markdown: {
     rehypePlugins: [renameFootnoteLabel],

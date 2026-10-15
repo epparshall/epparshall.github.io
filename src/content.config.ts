@@ -51,6 +51,7 @@ const publications = defineCollection({
 		publisher: z.string(),
 		pubDate: z.date(),
 		link: z.string().url(),
+		linkLabel: z.string().optional(),
 	}),
 });
 

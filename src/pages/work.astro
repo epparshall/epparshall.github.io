@@ -13,10 +13,10 @@ const pubsWithContent = await Promise.all(
 );
 ---
 
-<BaseLayout title="Publications">
+<BaseLayout title="Work">
 	<header class="page-header">
-		<h1>Publications</h1>
-		<p class="subtitle">Selected professional writing, research papers, and technical contributions.</p>
+		<h1>Work</h1>
+		<p class="subtitle">Research papers, professional writing, and things I have built.</p>
 	</header>
 
 	<div class="pubs-list">
@@ -33,7 +33,7 @@ const pubsWithContent = await Promise.all(
 					<div class="pub-summary">
 						<pub.Content />
 					</div>
-					<a href={pub.data.link} class="external-link">View publication &rarr;</a>
+					<a href={pub.data.link} class="external-link">{pub.data.linkLabel ?? 'View publication'} &rarr;</a>
 				</div>
 			</article>
 		))}
@@ -112,6 +112,10 @@ const pubsWithContent = await Promise.all(
 
 	.pub-summary :global(p) {
 		margin-bottom: 0;
+	}
+
+	.pub-summary :global(p + p) {
+		margin-top: 1rem;
 	}
 
 	.external-link {
