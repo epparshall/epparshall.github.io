@@ -1,6 +1,6 @@
 ---
 destination: "Guatemala"
-description: ""
+description: "Antigua, a stormy night hike up Fuego and Acatenango, and paddleboarding on Lake Atitlán."
 date: 2024-09-01
 image: "/images/travel/acatenango-summit.jpg"
 ---
@@ -28,7 +28,7 @@ The hike up was hard. I was carrying a regular backpack with no hip support, so 
 
 Once we made it up to camp on Acatenango, you could actually see Fuego erupting from across the saddle. The noise comes first, a low rumble, and then you look over and see lava arcing into the air with smoke billowing out. Everyone in camp stopped whatever they were doing and just stared. It is also visually wild because one side of Fuego is covered in lush green vegetation and the other side is just black ash from the eruptions.
 
-After we rested, about half our group went for the optional Fuego summit attempt. We dropped down off Acatenango and started across toward Fuego, walking through these massive gulleys carved into the volcanic terrain. Our guide, Jaime, casually mentioned that just a few days earlier a tourist had died in one of these gulleys. It had started raining, the gulley filled with water faster than anyone expected, and the tourist froze. The water swept her down to the base of the volcano. He told us this while we were standing in the same gulleys. It is one of those moments that puts the weight of what you are doing into immediate focus, and it is also why having a competent and experienced guide matters so much.
+After we rested, about half our group went for the optional Fuego summit attempt. We dropped down off Acatenango and started across toward Fuego, walking through these massive gullies carved into the volcanic terrain. Our guide, Jaime, casually mentioned that just a few days earlier a tourist had died in one of these gullies. It had started raining, the gulley filled with water faster than anyone expected, and the tourist froze. The water swept her down to the base of the volcano. He told us this while we were standing in the same gullies. It is one of those moments that puts the weight of what you are doing into immediate focus, and it is also why having a competent and experienced guide matters so much.
 
 We made it across and started up Fuego. At some point on the way up I looked up at how much more there was and genuinely thought I might have made a mistake. But I had not come all this way to bail because I was tired. We kept climbing as the sun set, and by the time we reached our viewing point it was completely dark, around seven PM. Jaime was already not sure we would get a clear view of an eruption because of how thick the clouds were. We waited, and sadly we did not see an up close eruption.
 
@@ -39,7 +39,7 @@ Then the wind picked up. Then it started lightly raining. Then we saw lightning 
   <figcaption>Fuego spitting lava at night.</figcaption>
 </figure>
 
-A few minutes later it was pouring hard. We had to start moving back to camp at Acatenango where the rest of the group was. Everyone had headlamps but they only lit a few feet ahead of you. Mine was almost dead, and Jaime gave me one of his spares. The rain was filling those same gulleys Jaime had just told us about. One wrong step and you fall in and the water carries you to the bottom of the volcano. I lost count of how many times I reached out with my walking stick expecting ground and found nothing, just open air over a moving river. A French girl next to me kept saying "I'm scared." I did not know what to tell her. All I could think to say was *just take one step at a time*. It brought me back to playing competitive tennis as a kid, when I would get so nervous during a match that the only thing I could tell myself was *play it one point at a time*.
+A few minutes later it was pouring hard. We had to start moving back to camp at Acatenango where the rest of the group was. Everyone had headlamps but they only lit a few feet ahead of you. Mine was almost dead, and Jaime gave me one of his spares. The rain was filling those same gullies Jaime had just told us about. One wrong step and you fall in and the water carries you to the bottom of the volcano. I lost count of how many times I reached out with my walking stick expecting ground and found nothing, just open air over a moving river. A French girl next to me kept saying "I'm scared." I did not know what to tell her. All I could think to say was *just take one step at a time*. It brought me back to playing competitive tennis as a kid, when I would get so nervous during a match that the only thing I could tell myself was *play it one point at a time*.
 
 We eventually made it down off Fuego and then had to do the hour-plus hike back up to camp on Acatenango. I had eaten all my Clif bars. I was at the back of the group hiking slowly, and I remember Jaime calling out to the group "*chicos, todo bien?*" and getting back a flat "*sí*," and then a moment later, separately, "Evan, *todo bien?*" Maybe I was not in quite as good shape as I thought.
 

@@ -1,7 +1,8 @@
 ---
 destination: "Spain"
 date: 2022-06-15
-description: ""
+description: "Helping my sister move from Madrid to Barcelona, and climbing the towers of the Sagrada Família."
+image: "/images/travel/spain-family.jpg"
 ---
 
 I went to Spain with my dad to visit my sister Riley, who was studying abroad. She had just finished the spring semester in Madrid and was moving to Barcelona for a summer internship. For an American, landing an internship in Spain is pretty rare, so it was exciting she had this opportunity. We flew in mostly to help her move her stuff, but we wanted to see the country while we were there.
@@ -11,11 +12,9 @@ I went to Spain with my dad to visit my sister Riley, who was studying abroad. S
   <figcaption>Me with my dad and sister Riley in Spain.</figcaption>
 </figure>
 
-We flew into Madrid first.
- I really liked the city. It is clean, walkable, and orderly, with great weather and beautiful public parks that are genuinely worth setting aside an afternoon for. The public transportation was excellent too, especially the underground metro. It was clean, easy to navigate, and very affordable, even more so if you are a student.
+We flew into Madrid first. I really liked the city. It is clean, walkable, and orderly, with great weather and beautiful public parks that are genuinely worth setting aside an afternoon for. The public transportation was excellent too, especially the underground metro. It was clean, easy to navigate, and very affordable, even more so if you are a student.
 
- My Spanish ear is trained on Latin American Spanish, so the Iberian accent threw me off, especially the lisped c and z sounds.
- People could understand me fine when I spoke to them, but I struggled to keep up when they spoke back. It did not matter much in practice because almost everyone we interacted with spoke English anyway, which speaks to how touristy these cities have become.
+My Spanish ear is trained on Latin American Spanish, so the Iberian accent threw me off, especially the lisped c and z sounds. People could understand me fine when I spoke to them, but I struggled to keep up when they spoke back. It did not matter much in practice because almost everyone we interacted with spoke English anyway, which speaks to how touristy these cities have become.
 
 From Madrid we took the train to Barcelona, and the contrast was immediate. It felt like a giant party town. I am pretty sure I heard more British accents than Spanish or *Catalan* ones the whole time we were there. Barcelona almost did not feel like it belonged in Spain, and honestly a lot of people there would agree with me. Catalonia has its own language, its own flag, and a real independence movement that held an unofficial referendum back in 2017. You can feel that the city has its own identity.
 

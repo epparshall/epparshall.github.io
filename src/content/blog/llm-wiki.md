@@ -37,7 +37,7 @@ Karpathy's framing was the one that landed for me: maintaining a knowledge base 
 
 ## English Is the Durable Layer
 
-We are in a wild stretch of model churn. A year ago the debate was GPT-4 versus Claude 3.5 versus Gemini 1.5. Today it is whatever shipped yesterday. People argue endlessly about which model is best at code, which is best at reasoning, which vendor is safe to commit to. Within six months the pecking order will shuffle again. Within two years it may be a different set of companies entirely.
+We are in a wild stretch of model churn. Two years ago the debate was GPT-4o versus Claude 3.5 Sonnet versus Gemini 1.5. Today it is whatever shipped yesterday. People argue endlessly about which model is best at code, which is best at reasoning, which vendor is safe to commit to. Within six months the pecking order will shuffle again. Within two years it may be a different set of companies entirely.
 
 One thing has not changed and probably will not: English is the interface. Plain markdown is the storage format. Whatever model is best at the end of next year will still read English and still read markdown. Whatever specialized model your IDE ships with in five years will still be trained on English text.
 
@@ -45,7 +45,7 @@ That is the key. If you store your distilled knowledge in plain English text, it
 
 Think of it like a recipe written in English. The same recipe works on a gas stove, an induction range, or a campfire. The instructions are the durable artifact. The hardware running them is interchangeable. The wiki is your recipe collection.
 
-The bigger point is that this is genuinely a long game. The wiki I started today will still be useful and readable in 2030 while the chat history I had with last year's hot model is most likely gone. Time spent organizing knowledge into a personal wiki compounds. Time spent producing one-shot answers in a chat does not.
+The bigger point is that this is genuinely a long game. The wiki I started this year will still be useful and readable in 2030 while the chat history I had with last year's hot model is most likely gone. Time spent organizing knowledge into a personal wiki compounds. Time spent producing one-shot answers in a chat does not.
 
 ## How to Build Your Own
 
@@ -55,7 +55,7 @@ It is far simpler than you might think.
 2. Open the repo in an LLM coding tool. I use Claude Code. Cursor, Aider, Codex CLI, and a half-dozen others work the same way. The point is to use an LLM that can read and write files in your repo, not one you just chat with about them.
 3. Hand it a prompt. The easiest thing is to paste in [Andrej Karpathy's original gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) and say "build this for me." That is literally how I bootstrapped mine. If you want to be more explicit, something like: "Set up this repo as a personal LLM wiki. Create a `raw/` folder for source documents you will never modify and a `wiki/` folder where you write summary pages, entity pages, concept pages, question pages, and a running log. Write an `AGENTS.md` schema file at the root that defines the page types, naming conventions, frontmatter format, and the operations you'll support (ingest, query, lint, note). Auto-commit and push every time you change anything."
 
-A note on the schema file. I called mine `AGENTS.md` because that is the convention Claude Code looks for. Other tools use different names: Cursor looks for `.cursorrules`, Aider uses `CONVENTIONS.md`, and so on. Use whatever your tool expects. The file itself does the same job in all of them, which is to tell the LLM how to behave in your repo.
+A note on the schema file. I called mine `AGENTS.md` because it is the closest thing to a cross-tool standard: Codex, Cursor, and most other coding agents read it. Claude Code looks for `CLAUDE.md` instead, so a one-line `CLAUDE.md` that points at `AGENTS.md` covers both. Aider uses `CONVENTIONS.md`, and so on. Use whatever your tool expects. The file itself does the same job in all of them, which is to tell the LLM how to behave in your repo.
 
 The LLM will build the schema, the folder structure, an empty index, and the log. You will have a working wiki in under a minute. From there it is just a matter of starting to feed it sources.
 
@@ -77,7 +77,7 @@ The clearest way to explain what an LLM wiki is good for is to show a few things
 
 The pattern that holds across all four is the same: I provide content, the LLM bookkeeps, the wiki compounds. The questions I can ask of the wiki six months from now will be sharper than the questions I can ask of any one-shot chat today, because the wiki has been quietly accumulating context the whole time.
 
-This is the single highest-level thing I have added to my workflow in the last year.
+This is the single highest-leverage thing I have added to my workflow in the last year.
 
 ## Schedule the Boring Parts
 
@@ -95,7 +95,7 @@ The simplest way to wire these up is a cron job on your laptop that invokes your
 
 One thing you will run into a few months in: the wiki getting too big to read in one pass. The early version of this problem is your index file growing past what fits cleanly in context. The later version is individual concept pages bloating with so many cross-references and updates that they become harder for the LLM to use, not easier.
 
-This is exactly the problem the AI coding tools have been solving for themselves, and it is worth borrowing what they learned. The contrast I find clearest is OpenClaw versus Hermes. Both are agentic AI coding tools that maintain persistent context. OpenClaw tends to get slower as a session grows: it accumulates context and does not aggressively prune it. Hermes does the opposite. As the session grows, Hermes compresses older context, summarizes runs of redundant or outdated information, and keeps the working set lean. The effect is that Hermes feels like it gets smarter the longer you use it, while OpenClaw feels like it gets sluggish.
+This is exactly the problem AI agents have been solving for themselves, and it is worth borrowing what they learned. The contrast I find clearest is OpenClaw versus Hermes. Both are open-source AI agents that maintain persistent context. OpenClaw tends to get slower as a session grows: it accumulates context and does not aggressively prune it. Hermes does the opposite. As the session grows, Hermes compresses older context, summarizes runs of redundant or outdated information, and keeps the working set lean. The effect is that Hermes feels like it gets smarter the longer you use it, while OpenClaw feels like it gets sluggish.
 
 Your wiki has the same dynamic. Without compression, every page just accumulates. With it, the wiki keeps getting better. The fix is to add a recurring compression pass to your scheduled jobs: once a month, have the LLM read each concept page, identify redundant or outdated sections, merge overlapping content, and trim. The same job can compress your log file, summarizing runs of routine operations into a single weekly digest. The wiki gets denser, not longer, as it grows.
 

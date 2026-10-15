@@ -24,6 +24,6 @@ But that is also why it works. The message is impossible to miss, and hard to fu
 
 This book might be the reason I love Switzerland so much. A country that emphasizes individual responsibility, productivity, and a culture that rewards competence rather than punishing it tends to look pretty good through a post-Rand lens. I do not agree with every conclusion Rand draws though. The most extreme versions of her philosophy slide toward an indifference to human suffering that I think is genuinely wrong. But the core insight, that individual responsibility and productive work are central to a meaningful life, is one I keep coming back to.
 
-I would definitely recommend reading this book at least once, even just to wrestle with the ideas. It genuinely changed how I think about responsibility, work, and what people owe each other. This is one of the rare books you read that geniuinely changes you.
+I would definitely recommend reading this book at least once, even just to wrestle with the ideas. It genuinely changed how I think about responsibility, work, and what people owe each other. This is one of the rare books you read that genuinely changes you.
 
 And yeah. Who is John Galt?

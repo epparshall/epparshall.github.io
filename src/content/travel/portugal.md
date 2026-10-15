@@ -1,7 +1,7 @@
 ---
 destination: "Portugal"
 date: 2023-12-01
-description: ""
+description: "My first solo trip: a week in Lisbon with day trips to Sintra and Belém, fado, and one bad case of food poisoning."
 image: "/images/travel/lisbon-balcony.jpg"
 ---
 
@@ -26,12 +26,11 @@ I love taking walking tours in cities I visit, and Lisbon was a great one for it
   <figcaption>Looking out over the red-tiled roofs of the Alfama district in Lisbon.</figcaption>
 </figure>
 
-The 1755 earthquake came up a lot on the walking tour I took, and for good reason.
- The earthquake hit on All Saints’ Day. While the churches were packed for mass, candles toppled into wooden pews and fires broke out across the city. People fled to the waterfront thinking it was safer than the burning streets. The sea pulled back from the harbor first, and the Catholics took it as a sign from God, a kind of miracle for them specifically. Then the tsunami came in and killed them. It is the kind of historical detail that I never forgot.
+The 1755 earthquake came up a lot on the walking tour I took, and for good reason. The earthquake hit on All Saints’ Day. While the churches were packed for mass, candles toppled into wooden pews and fires broke out across the city. People fled to the waterfront thinking it was safer than the burning streets. The sea pulled back from the harbor first, and the Catholics took it as a sign from God, a kind of miracle for them specifically. Then the tsunami came in and killed them. It is the kind of historical detail that I never forgot.
 
 The earthquake of 1755 is also the reason downtown Lisbon feels more modern than most European old cities. The rebuild, led by the Marquis of Pombal, laid out the Baixa on a strict grid and used an early earthquake-resistant wooden cage system called the *gaiola pombalina*. They tested it by marching troops around scale models to simulate the shaking. It is basically one of the first examples of modern urban planning in Europe, which is why the downtown feels orderly in a way other cities do not.
 
-I did have to sit with some uncomfortable feelings about gentrification while I was there, and I was definitely part of the problem. Lisbon is the most touristy city I have ever been to. It felt like there were more immigrants and tourists than actual Portuguese people, and every other shop was selling the same magnets and Ronaldo jerseys, run by someone who clearly was not from there. It makes sense in context. Portugal nearly collapsed financially in the early 2010s and leaned hard into attracting foreign investment, foreign residents, and tourism to dig out. The climate is great, the cities are safe and beautiful, and the cost of living is low by European standards. Great place to live, but the corporate tax structure explains why no big company has its HQ there. And the lack of non tourism-based jobs explains why so many Portuguese are leaving.
+I did have to sit with some uncomfortable feelings about gentrification while I was there, and I was definitely part of the problem. Lisbon is the most touristy city I have ever been to. It felt like there were more immigrants and tourists than actual Portuguese people, and every other shop was selling the same magnets and Ronaldo jerseys, run by someone who clearly was not from there. It makes sense in context. Portugal nearly collapsed financially in the early 2010s and leaned hard into attracting foreign investment, foreign residents, and tourism to dig out. The climate is great, the cities are safe and beautiful, and the cost of living is low by European standards. Great place to live, but the corporate tax structure explains why no big company has its HQ there. And the lack of jobs outside tourism explains why so many Portuguese are leaving.
 
 A lot of Brazilians were trying to immigrate when I was there, mostly through a Sephardic ancestry loophole Portugal opened up in 2015 as a kind of historical reparation for the Inquisition and the forced conversions and expulsions of the late 1400s. For a Brazilian, a Portuguese passport is essentially an EU passport, which means you can work in France or Germany or anywhere else in the EU. Portugal has since started phasing out the program, partly because it had become a backdoor to EU citizenship rather than what it was originally meant to be.
 
@@ -44,8 +43,7 @@ I also took day trips to Sintra and Belém. The *pastéis de Belém* are suppose
   <figcaption>The top of the castle in Sintra, looking out over the landscape.</figcaption>
 </figure>
 
-Lisbon is also a real party city.
- I had a great hostel, went to lots of good bars, and made a bunch of friends. Those friends I ended up having dinner with, going out with, or listening to live *fado* with. *Fado* is the traditional Portuguese music style, all longing and heartbreak and minor keys, and it is best heard live with a glass of wine.
+Lisbon is also a real party city. I had a great hostel, went to lots of good bars, and made a bunch of friends. Those friends I ended up having dinner with, going out with, or listening to live *fado* with. *Fado* is the traditional Portuguese music style, all longing and heartbreak and minor keys, and it is best heard live with a glass of wine.
 
 On the practical side, Portugal is very affordable, which is a big part of why I picked it. I paid about $20 USD per night for a hostel. The city itself is entirely walkable, and the public transit is cheap and easy. One piece of general European travel advice: if you have access to a free bathroom, use it even if you do not have to go. Public restrooms are nearly impossible to find.
 

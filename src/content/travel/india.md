@@ -1,7 +1,7 @@
 ---
 destination: "India"
 date: 2024-12-01
-description: ""
+description: "Two weeks across Rajasthan, Rishikesh, and Agra with my friends Junaid and Colin, and Junaid as our translator."
 image: "/images/travel/taj-mahal-selfie.jpg"
 ---
 
