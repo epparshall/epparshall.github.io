@@ -13,7 +13,12 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 ---
 
-<BaseLayout title={entry.data.destination}>
+<BaseLayout
+	title={entry.data.destination}
+	description={entry.data.description || `Evan Parshall's travel notes and stories from ${entry.data.destination}.`}
+	image={entry.data.image}
+	type="article"
+>
 	<article class="travel-detail">
 		<header>
 			<h1>{entry.data.destination}</h1>

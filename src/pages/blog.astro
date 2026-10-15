@@ -26,7 +26,7 @@ const allTags = Array.from(
 ).sort();
 ---
 
-<BaseLayout title="Blog">
+<BaseLayout title="Blog" description="Evan Parshall's writing on technology, AI, health, personal finance, travel, and ideas worth sharing.">
 	<header class="page-header">
 		<h1>Blog</h1>
 		<p class="subtitle">Writing on technology, health and wellness, finance, travel, politics, and ideas worth sharing.</p>
@@ -43,12 +43,12 @@ const allTags = Array.from(
 
 		{allTags.length > 0 && (
 			<div class="multi-select">
-				<button type="button" id="tag-trigger" class="multi-select-trigger">
+				<button type="button" id="tag-trigger" class="multi-select-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="tag-panel">
 					<span id="trigger-text">Tags</span>
 					<span class="chevron" aria-hidden="true">▾</span>
 				</button>
 				<div id="tag-panel" class="tag-panel hidden">
-					<div id="clear-all-tags" class="tag-option clear-option">Clear filters</div>
+					<button type="button" id="clear-all-tags" class="tag-option clear-option">Clear filters</button>
 					{allTags.map((tag) => (
 						<label class="tag-option">
 							<input type="checkbox" value={tag} />
@@ -99,7 +99,7 @@ const allTags = Array.from(
 		))}
 	</div>
 
-	<p id="no-results" class="no-results" style="display: none;">
+	<p id="no-results" class="no-results" style="display: none;" role="status">
 		No posts match your search or selected tags.
 	</p>
 
@@ -226,11 +226,13 @@ const allTags = Array.from(
 			function openPanel() {
 				syncCheckboxes();
 				panel.classList.remove('hidden');
+				trigger.setAttribute('aria-expanded', 'true');
 				if (multiSelect) multiSelect.classList.add('open');
 			}
 
 			function closePanel() {
 				panel.classList.add('hidden');
+				trigger.setAttribute('aria-expanded', 'false');
 				if (multiSelect) multiSelect.classList.remove('open');
 			}
 
@@ -247,6 +249,14 @@ const allTags = Array.from(
 			document.addEventListener('click', (e) => {
 				if (multiSelect && !multiSelect.contains(e.target)) {
 					closePanel();
+				}
+			});
+
+			// Escape closes the panel and returns focus to the trigger
+			document.addEventListener('keydown', (e) => {
+				if (e.key === 'Escape' && !panel.classList.contains('hidden')) {
+					closePanel();
+					trigger.focus();
 				}
 			});
 
@@ -501,6 +511,12 @@ const allTags = Array.from(
 	}
 
 	.clear-option {
+		width: 100%;
+		border: 0;
+		border-bottom: 1px solid var(--color-border);
+		background: none;
+		font: inherit;
+		text-align: left;
 		font-weight: 600;
 		color: var(--color-accent-strong);
 		border-bottom: 1px solid var(--color-border);

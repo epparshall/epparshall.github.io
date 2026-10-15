@@ -1,6 +1,7 @@
 ---
 import { getCollection, getEntry, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { affiliate, amazonBookUrl } from '../../config/affiliate.mjs';
 
 export async function getStaticPaths() {
 	const bookEntries = await getCollection('books');
@@ -20,9 +21,16 @@ const honorableMentionsOrder = rankingsEntry?.data.honorableMentions || [];
 const rankIndex = favoriteOrder.indexOf(entry.id);
 const rank = rankIndex !== -1 ? rankIndex + 1 : null;
 const isHonorableMention = honorableMentionsOrder.includes(entry.id);
+const shortTitle = entry.data.title.split(':')[0];
+const buyUrl = amazonBookUrl(shortTitle, entry.data.author);
 ---
 
-<BaseLayout title={entry.data.title}>
+<BaseLayout
+	title={shortTitle}
+	description={`Evan Parshall's review of ${shortTitle} by ${entry.data.author}: what stuck, what did not, and who should read it.`}
+	image={entry.data.image}
+	type="article"
+>
 	<article class="book-detail">
 		<header>
 			{rank && <p class="rank">#{rank} Favorite</p>}
@@ -40,6 +48,13 @@ const isHonorableMention = honorableMentionsOrder.includes(entry.id);
 						{entry.data.rating && (
 							<span class="rating">{entry.data.rating}/5 stars</span>
 						)}
+						<a
+							class="buy-link"
+							href={buyUrl}
+							rel={affiliate.amazonTag ? 'sponsored noopener noreferrer' : 'noopener noreferrer'}
+						>
+							Find this book &rarr;
+						</a>
 					</div>
 				</div>
 			</div>
@@ -129,6 +144,22 @@ const isHonorableMention = honorableMentionsOrder.includes(entry.id);
 		padding: 0.4rem 0.8rem;
 		border-radius: var(--radius);
 		border: 1px solid var(--color-border);
+	}
+
+	.buy-link {
+		font-size: 0.95rem;
+		font-weight: 650;
+		color: var(--color-accent-strong);
+		padding: 0.4rem 0.8rem;
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius);
+		background: var(--color-surface);
+	}
+
+	.buy-link:hover {
+		background: var(--color-accent-soft);
+		border-color: rgba(47, 111, 94, 0.45);
+		opacity: 1;
 	}
 
 	hr {

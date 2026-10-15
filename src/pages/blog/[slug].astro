@@ -28,7 +28,12 @@ const nextSeriesEntry = currentSeriesIndex >= 0 && currentSeriesIndex < seriesEn
 	: null;
 ---
 
-<BaseLayout title={entry.data.title}>
+<BaseLayout
+	title={entry.data.title}
+	description={entry.data.description}
+	type="article"
+	publishedDate={entry.data.pubDate}
+>
 	<article class="blog-post">
 		<header>
 			{entry.data.seriesTitle && entry.data.seriesPart && entry.data.seriesTotal && (

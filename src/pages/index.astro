@@ -1,5 +1,18 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+// A multi-part series shows once, as its first part, so it cannot crowd out other posts.
+const seen = new Set<string>();
+const recentPosts = (await getCollection('blog', ({ data }) => data.draft !== true))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf() || (a.data.seriesPart ?? 0) - (b.data.seriesPart ?? 0))
+	.filter(({ data }) => {
+		if (!data.seriesTitle) return true;
+		if (seen.has(data.seriesTitle)) return false;
+		seen.add(data.seriesTitle);
+		return true;
+	})
+	.slice(0, 3);
 ---
 
 <BaseLayout title="Home">
@@ -15,7 +28,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				</p>
 			</div>
 			<div class="hero-image">
-				<img src="/images/evan-parshall.jpg" alt="Evan Parshall" />
+				<img src="/images/evan-parshall.jpg" alt="Evan Parshall" width="280" height="280" />
 			</div>
 		</div>
 	</section>
@@ -40,6 +53,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				<p>Research papers, professional writing, and apps I've built.</p>
 			</a>
 		</div>
+	</section>
+
+	<section class="recent">
+		<h2 class="section-title">Recent Writing</h2>
+		<ul class="recent-list">
+			{recentPosts.map((post) => (
+				<li>
+					<a href={`/blog/${post.id}`}>
+						<span class="recent-title">
+							{post.data.seriesTitle && post.data.seriesTotal
+								? `${post.data.seriesTitle} series (${post.data.seriesTotal} parts)`
+								: post.data.title}
+						</span>
+						<time datetime={post.data.pubDate.toISOString()}>
+							{post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', timeZone: 'UTC' })}
+						</time>
+					</a>
+				</li>
+			))}
+		</ul>
+		<a class="recent-all" href="/blog">All posts &rarr;</a>
 	</section>
 
 	<section class="connect">
@@ -146,6 +180,52 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		color: var(--color-text-light);
 	}
 
+	.recent {
+		margin-bottom: 5rem;
+	}
+
+	.recent-list {
+		list-style: none;
+		padding: 0;
+		margin-bottom: 1rem;
+		border-top: 1px solid var(--color-border);
+	}
+
+	.recent-list li {
+		margin: 0;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.recent-list a {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 1rem;
+		padding: 0.9rem 0.25rem;
+		color: var(--color-text);
+	}
+
+	.recent-list a:hover {
+		color: var(--color-accent-strong);
+		opacity: 1;
+	}
+
+	.recent-title {
+		font-weight: 650;
+		font-size: 1.05rem;
+	}
+
+	.recent-list time {
+		flex-shrink: 0;
+		font-size: 0.85rem;
+		color: var(--color-text-light);
+	}
+
+	.recent-all {
+		font-weight: 600;
+		color: var(--color-accent-strong);
+	}
+
 	.connect-links {
 		display: flex;
 		gap: 0.75rem;
@@ -200,7 +280,53 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			height: min(62vw, 220px);
 		}
 
-		.connect-links {
+		.recent {
+		margin-bottom: 5rem;
+	}
+
+	.recent-list {
+		list-style: none;
+		padding: 0;
+		margin-bottom: 1rem;
+		border-top: 1px solid var(--color-border);
+	}
+
+	.recent-list li {
+		margin: 0;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.recent-list a {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 1rem;
+		padding: 0.9rem 0.25rem;
+		color: var(--color-text);
+	}
+
+	.recent-list a:hover {
+		color: var(--color-accent-strong);
+		opacity: 1;
+	}
+
+	.recent-title {
+		font-weight: 650;
+		font-size: 1.05rem;
+	}
+
+	.recent-list time {
+		flex-shrink: 0;
+		font-size: 0.85rem;
+		color: var(--color-text-light);
+	}
+
+	.recent-all {
+		font-weight: 600;
+		color: var(--color-accent-strong);
+	}
+
+	.connect-links {
 			justify-content: flex-start;
 			gap: 0.75rem;
 		}

@@ -3,9 +3,10 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const resources = await getCollection('travelResources');
+resources.sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---
 
-<BaseLayout title="Travel Tips & Resources">
+<BaseLayout title="Travel Tips & Resources" description="The gear, cards, apps, and habits Evan Parshall relies on for cheaper, lower-stress international travel.">
 	<header class="page-header">
 		<h1>General Tips & Resources</h1>
 	</header>

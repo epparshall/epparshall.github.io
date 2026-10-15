@@ -1,43 +1,32 @@
-# Astro Starter Kit: Minimal
+<a href="https://epparshall.github.io">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="readme/dark_mode.svg">
+    <img alt="Evan Parshall: ASCII portrait beside a terminal-style summary of role, languages, projects, and contact links" src="readme/light_mode.svg">
+  </picture>
+</a>
 
-```sh
-npm create astro@latest -- --template minimal
-```
+# epparshall.github.io
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Evan Parshall's personal website, built with [Astro](https://astro.build) and deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push to `main`.
 
-## 🚀 Project Structure
+## Commands
 
-Inside of your Astro project, you'll see the following folders and files:
+| Command           | Action                                      |
+| :---------------- | :------------------------------------------ |
+| `npm install`     | Install dependencies                        |
+| `npm run dev`     | Start the dev server at `localhost:4321`    |
+| `npm run build`   | Build the production site into `./dist/`    |
+| `npm run preview` | Serve the production build locally          |
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Where things live
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- `src/content/` holds all writing as markdown, one folder per collection (`blog`, `books`, `travel`, `travelResources`, `publications`). The schema for each is in `src/content.config.ts`.
+- `src/content/rankings.json` orders the books page.
+- `src/pages/` holds the page templates. `/publications` redirects to `/work` (see `astro.config.mjs`).
+- `src/config/affiliate.mjs` holds the Amazon Associates tag. Leave it empty and links stay untagged; set it and every Amazon link is tagged and the footer shows the disclosure.
+- `readme/` holds the card at the top of this README. Edit the text in `readme/build_card.py` and run `python3 readme/build_card.py` (needs numpy, opencv-python, and Pillow) to regenerate both SVGs.
+- `public/images/` holds photos. Resize anything new to about 1600px on the long edge and strip location metadata before committing; phone photos are 3 to 8 MB each and carry GPS coordinates.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Writing a post
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Add a markdown file to `src/content/blog/` with `title`, `description`, and `pubDate` frontmatter. Set `draft: true` to keep it off the site. Posts appear on the blog page, the home page's recent list, and the RSS feed at `/rss.xml`.

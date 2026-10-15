@@ -26,7 +26,7 @@ const otherBooks = books.filter(book =>
 );
 ---
 
-<BaseLayout title="Books">
+<BaseLayout title="Books" description="Evan Parshall's ranked list of favorite books, with a full review of each one.">
 	<header class="page-header">
 		<h1>Books</h1>
 		<p class="subtitle">We live only one life, but through books we borrow fragments of thousands more. Every truly great book leaves a small graveyard of old beliefs behind it.</p>
@@ -40,15 +40,13 @@ const otherBooks = books.filter(book =>
 					<div class="rank">#{index + 1}</div>
 					{book.data.image && (
 						<div class="book-cover">
-							<a href={`/books/${book.id}`}>
-								<img src={book.data.image} alt={book.data.title} />
+							<a href={`/books/${book.id}`} tabindex="-1" aria-hidden="true">
+								<img src={book.data.image} alt="" loading="lazy" decoding="async" />
 							</a>
 						</div>
 					)}
 					<div class="book-info">
-						<a href={`/books/${book.id}`}>
-							<h3>{book.data.title}</h3>
-						</a>
+						<h3><a class="card-link" href={`/books/${book.id}`}>{book.data.title}</a></h3>
 						<p class="author">by {book.data.author}</p>
 						<div class="meta">
 							{book.data.rating && (
@@ -70,15 +68,13 @@ const otherBooks = books.filter(book =>
 						<div class="rank">HM</div>
 						{book.data.image && (
 							<div class="book-cover">
-								<a href={`/books/${book.id}`}>
-									<img src={book.data.image} alt={book.data.title} />
+								<a href={`/books/${book.id}`} tabindex="-1" aria-hidden="true">
+									<img src={book.data.image} alt="" loading="lazy" decoding="async" />
 								</a>
 							</div>
 						)}
 						<div class="book-info">
-							<a href={`/books/${book.id}`}>
-								<h3>{book.data.title}</h3>
-							</a>
+							<h3><a class="card-link" href={`/books/${book.id}`}>{book.data.title}</a></h3>
 							<p class="author">by {book.data.author}</p>
 						</div>
 					</article>
@@ -95,9 +91,7 @@ const otherBooks = books.filter(book =>
 					<article class="book-item">
 						<div class="rank">-</div>
 						<div class="book-info">
-							<a href={`/books/${book.id}`}>
-								<h3>{book.data.title}</h3>
-							</a>
+							<h3><a class="card-link" href={`/books/${book.id}`}>{book.data.title}</a></h3>
 							<p class="author">by {book.data.author}</p>
 						</div>
 					</article>
@@ -158,6 +152,18 @@ const otherBooks = books.filter(book =>
 		border-radius: var(--radius);
 		box-shadow: var(--shadow-sm);
 		transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+	}
+
+	.book-item {
+		position: relative;
+	}
+
+	/* The title link covers the whole card so the hover lift matches what is clickable. */
+	.card-link::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		border-radius: var(--radius);
 	}
 
 	.book-item:hover {

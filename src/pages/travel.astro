@@ -6,7 +6,7 @@ const destinations = await getCollection('travel');
 destinations.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
-<BaseLayout title="Travel">
+<BaseLayout title="Travel" description="Evan Parshall's travel stories and practical advice from Colombia, Peru, Switzerland, Germany, India, Guatemala, Portugal, and Spain.">
 	<header class="page-header">
 		<h1>Travel</h1>
 		<p class="subtitle">Time doesn’t pass quickly because it is full, but because it is repetitive. Novelty is what anchors memory, and memory is what we mistake for time lived. To travel is to interrupt sameness long enough for life to become legible again.</p>
@@ -29,6 +29,15 @@ destinations.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 			{destinations.map((dest) => (
 				<article class="travel-item">
 					<a href={`/travel/${dest.id}`} class="travel-card">
+						{dest.data.image && (
+							<img
+								class="travel-cover"
+								src={dest.data.image}
+								alt=""
+								loading="lazy"
+								decoding="async"
+							/>
+						)}
 						<time class="date" datetime={dest.data.date.toISOString()}>
 							{dest.data.date.toLocaleDateString('en-US', {
 								year: 'numeric',
@@ -156,6 +165,20 @@ destinations.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 		height: 100%;
 	}
 
+	.travel-card {
+		overflow: hidden;
+	}
+
+	.travel-cover {
+		display: block;
+		width: calc(100% + 4rem);
+		max-width: none;
+		height: 200px;
+		margin: -2rem -2rem 1.5rem;
+		object-fit: cover;
+		background: var(--color-surface-muted);
+	}
+
 	.travel-card:hover {
 		transform: translateY(-3px);
 		box-shadow: var(--shadow-md);
@@ -242,6 +265,12 @@ destinations.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 		.travel-card {
 			padding: 1.15rem;
+		}
+
+		.travel-cover {
+			width: calc(100% + 2.3rem);
+			height: 170px;
+			margin: -1.15rem -1.15rem 1rem;
 		}
 
 		.travel-card h2 {
