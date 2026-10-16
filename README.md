@@ -1,7 +1,7 @@
 <a href="https://epparshall.github.io">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="readme/dark_mode.svg?v=3">
-    <img alt="Evan Parshall: ASCII portrait beside a terminal-style summary of role, education, interests, and contact links" src="readme/light_mode.svg?v=3">
+    <source media="(prefers-color-scheme: dark)" srcset="readme/dark_mode_9c4ba679.svg">
+    <img alt="Evan Parshall: ASCII portrait beside a terminal-style summary of role, education, interests, and contact links" src="readme/light_mode_2eb2f218.svg">
   </picture>
 </a>
 
@@ -24,7 +24,7 @@ Evan Parshall's personal website, built with [Astro](https://astro.build) and de
 - `src/content/rankings.json` orders the books page.
 - `src/pages/` holds the page templates. `/publications` redirects to `/work` (see `astro.config.mjs`).
 - `src/config/affiliate.mjs` holds the Amazon Associates tag. Leave it empty and links stay untagged; set it and every Amazon link is tagged and the footer shows the disclosure.
-- `readme/` holds the card at the top of this README. Edit the text in `readme/build_card.py` and run `python3 readme/build_card.py` (needs numpy, opencv-python, and Pillow) to regenerate both SVGs.
+- `readme/` holds the card at the top of this README. Edit the text in `readme/build_card.py` and run `python3 readme/build_card.py` (needs numpy, opencv-python, and Pillow). It writes both SVGs under new hashed names and updates the links above, which stops GitHub showing a cached old card.
 - `public/images/` holds photos. Resize anything new to about 1600px on the long edge and strip location metadata before committing; phone photos are 3 to 8 MB each and carry GPS coordinates.
 
 ## Writing a post
