@@ -23,7 +23,7 @@ const rank = rankIndex !== -1 ? rankIndex + 1 : null;
 const isHonorableMention = honorableMentionsOrder.includes(entry.id);
 const shortTitle = entry.data.title.split(':')[0];
 const buyUrl = amazonBookUrl(shortTitle, entry.data.author);
-const pageUrl = new URL(`/books/${entry.id}`, Astro.site).toString();
+const pageUrl = new URL(`/books/${entry.id}/`, Astro.site).toString();
 const evan = { '@type': 'Person', name: 'Evan Parshall', url: 'https://epparshall.github.io' };
 
 // Tells search engines this page is a review of a specific book. Google only shows

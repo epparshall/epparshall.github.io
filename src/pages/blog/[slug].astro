@@ -39,7 +39,7 @@ const postJsonLd = {
 	'@type': 'BlogPosting',
 	headline: entry.data.title,
 	description: entry.data.description,
-	url: new URL(`/blog/${entry.id}`, Astro.site).toString(),
+	url: new URL(`/blog/${entry.id}/`, Astro.site).toString(),
 	datePublished: entry.data.pubDate.toISOString().slice(0, 10),
 	author: evan,
 	publisher: evan,
