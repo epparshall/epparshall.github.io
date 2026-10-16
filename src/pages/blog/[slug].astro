@@ -12,7 +12,20 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
+
+// ~230 words a minute, ignoring markdown/HTML syntax and footnote definitions.
+const words = (entry.body ?? '')
+	.replace(/^\[\^[^\]]+\]:.*$/gm, '')
+	.replace(/<[^>]+>|!?\[([^\]]*)\]\([^)]*\)|[#*_`>|-]/g, ' $1 ')
+	.split(/\s+/)
+	.filter(Boolean).length;
+const readingMinutes = Math.max(1, Math.round(words / 230));
+
+// Long posts get an automatic table of contents, unless the post already has its own.
+const sections = headings.filter((h) => h.depth === 2 && h.slug !== 'footnote-label');
+const hasOwnContents = sections.some((h) => /^contents$/i.test(h.text.trim()));
+const showToc = !hasOwnContents && sections.length >= 4 && words >= 1200;
 const publishedEntries = await getCollection('blog', ({ data }) => {
 	return data.draft !== true;
 });
@@ -55,13 +68,17 @@ const nextSeriesEntry = currentSeriesIndex >= 0 && currentSeriesIndex < seriesEn
 				</p>
 			)}
 			<h1>{entry.data.title}</h1>
-			<time datetime={entry.data.pubDate.toISOString()}>
-				{entry.data.pubDate.toLocaleDateString('en-US', {
-					year: 'numeric',
-					month: 'long',
-					timeZone: 'UTC'
-				})}
-			</time>
+			<p class="post-meta">
+				<time datetime={entry.data.pubDate.toISOString()}>
+					{entry.data.pubDate.toLocaleDateString('en-US', {
+						year: 'numeric',
+						month: 'long',
+						timeZone: 'UTC'
+					})}
+				</time>
+				<span aria-hidden="true">&middot;</span>
+				<span>{readingMinutes} min read</span>
+			</p>
 			{entry.data.tags && entry.data.tags.length > 0 && (
 				<div class="post-tags">
 					{entry.data.tags.map((tag) => (
@@ -93,6 +110,14 @@ const nextSeriesEntry = currentSeriesIndex >= 0 && currentSeriesIndex < seriesEn
 				</nav>
 			)}
 		</header>
+		{showToc && (
+			<details class="toc" open>
+				<summary>On this page</summary>
+				<ol>
+					{sections.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}
+				</ol>
+			</details>
+		)}
 		<div class="content">
 			<Content />
 		</div>
@@ -200,6 +225,57 @@ const nextSeriesEntry = currentSeriesIndex >= 0 && currentSeriesIndex < seriesEn
 			align-items: center;
 			text-align: center;
 		}
+	}
+
+	.post-meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+		font-size: 0.9rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--color-text-light);
+	}
+
+	.post-meta time {
+		margin-bottom: 0 !important;
+	}
+
+	.toc {
+		margin: 0 0 2.5rem;
+		padding: 1rem 1.25rem;
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius);
+		background: var(--color-surface);
+		font-size: 0.95rem;
+	}
+
+	.toc summary {
+		cursor: pointer;
+		font-weight: 700;
+		font-size: 0.8rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--color-text-light);
+	}
+
+	.toc ol {
+		margin: 0.75rem 0 0;
+		padding-left: 1.25rem;
+	}
+
+	.toc li {
+		margin-bottom: 0.35rem;
+	}
+
+	.toc a {
+		color: var(--color-text);
+	}
+
+	.toc a:hover {
+		color: var(--color-accent-strong);
 	}
 
 	.blog-post time {
@@ -441,13 +517,11 @@ const nextSeriesEntry = currentSeriesIndex >= 0 && currentSeriesIndex < seriesEn
 		background: var(--color-surface);
 		text-decoration: none;
 		box-shadow: var(--shadow-sm);
-		transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+		transition: border-color 0.2s ease;
 	}
 
 	.series-link:hover {
 		border-color: rgba(47, 111, 94, 0.45);
-		box-shadow: var(--shadow-md);
-		transform: translateY(-2px);
 		opacity: 1;
 	}
 

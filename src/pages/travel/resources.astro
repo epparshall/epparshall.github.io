@@ -50,14 +50,12 @@ resources.sort((a, b) => a.data.title.localeCompare(b.data.title));
 		color: inherit;
 		border: 1px solid var(--color-border);
 		box-shadow: var(--shadow-sm);
-		transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+		transition: border-color 0.2s ease;
 		height: 100%;
 	}
 
 	.resource-card a:hover {
 		border-color: rgba(47, 111, 94, 0.45);
-		transform: translateY(-3px);
-		box-shadow: var(--shadow-md);
 		opacity: 1;
 	}
 

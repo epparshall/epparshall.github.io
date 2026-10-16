@@ -151,7 +151,7 @@ const otherBooks = books.filter(book =>
 		border: 1px solid var(--color-border);
 		border-radius: var(--radius);
 		box-shadow: var(--shadow-sm);
-		transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+		transition: border-color 0.2s ease;
 	}
 
 	.book-item {
@@ -167,8 +167,6 @@ const otherBooks = books.filter(book =>
 	}
 
 	.book-item:hover {
-		transform: translateY(-3px);
-		box-shadow: var(--shadow-md);
 		border-color: rgba(47, 111, 94, 0.45);
 		background: var(--color-surface);
 	}

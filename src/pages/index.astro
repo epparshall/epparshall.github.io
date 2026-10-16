@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 // A multi-part series shows once, as its first part, so it cannot crowd out other posts.
@@ -12,51 +12,82 @@ const recentPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
 		seen.add(data.seriesTitle);
 		return true;
 	})
-	.slice(0, 3);
+	.slice(0, 4);
+
+// The three hand-picked things on the home page. The book is always the #1 favorite;
+// change FEATURED_TRIP to feature a different trip (its file name in src/content/travel).
+const FEATURED_TRIP = 'peru';
+const rankings = await getEntry('rankings', 'rankings');
+const topBook = rankings ? await getEntry('books', rankings.data.favoriteBooks[0]) : undefined;
+const trip = await getEntry('travel', FEATURED_TRIP);
+
+const featured = [
+	{
+		label: 'Something I built',
+		title: 'Ballast',
+		blurb: 'A free paced-breathing app for iPhone and Apple Watch. I built it to keep the count for box breathing with haptic taps on my wrist.',
+		href: '/work',
+		image: '/images/work/ballast-icon.png',
+		imageClass: 'icon',
+	},
+	topBook && {
+		label: 'My favorite book',
+		title: topBook.data.title.split(':')[0],
+		blurb: `by ${topBook.data.author}. ${
+			topBook.id === 'why-nations-fail'
+				? 'The book that changed how I think about why some countries get rich and others stay poor.'
+				: 'Number one on my list of favorites.'
+		}`,
+		href: `/books/${topBook.id}`,
+		image: topBook.data.image,
+		imageClass: 'cover',
+	},
+	trip && {
+		label: 'A trip worth reading about',
+		title: trip.data.destination,
+		blurb: trip.data.description,
+		href: `/travel/${trip.id}`,
+		image: trip.data.image,
+		imageClass: 'photo',
+	},
+].filter(Boolean) as { label: string; title: string; blurb: string; href: string; image?: string; imageClass: string }[];
 ---
 
 <BaseLayout title="Home">
 	<section class="hero">
-		<div class="hero-content">
-			<div class="hero-text">
-				<h1>Hi, I'm Evan Parshall</h1>
-				<p>
-					I'm a software engineer based in Westfield, Indiana.
-				</p>
-				<p>
-					This is where I share my thoughts, book recommendations, travel experiences, and professional work.
-				</p>
-			</div>
-			<div class="hero-image">
-				<img src="/images/evan-parshall.jpg" alt="Evan Parshall" width="280" height="280" />
-			</div>
+		<div class="hero-text">
+			<h1>Hi, I'm Evan!</h1>
+			<p>
+				I'm a software engineer at SEP in Westfield, Indiana. I studied engineering at Purdue,
+				and love to travel and
+				learn languages.
+			</p>
+			<p>
+				I read a lot, mostly about health, history, and finance, and I write up what sticks.
+				This site is where those notes, my travel stories, and the projects I work on.
+			</p>
+		</div>
+		<img class="hero-image" src="/images/evan-parshall.jpg" alt="Evan Parshall" width="240" height="240" />
+	</section>
+
+	<section class="featured" aria-labelledby="featured-title">
+		<h2 id="featured-title" class="section-title">Start here</h2>
+		<div class="featured-grid">
+			{featured.map((item) => (
+				<a class="featured-item" href={item.href}>
+					<span class={`featured-media ${item.imageClass}`}>
+						{item.image && <img src={item.image} alt="" decoding="async" />}
+					</span>
+					<span class="featured-label">{item.label}</span>
+					<span class="featured-title">{item.title}</span>
+					<span class="featured-blurb">{item.blurb}</span>
+				</a>
+			))}
 		</div>
 	</section>
 
-	<section class="links">
-		<h2 class="section-title">Collections</h2>
-		<div class="links-grid">
-			<a href="/blog" class="link-card">
-				<h2>Blog</h2>
-				<p>Thoughts on technology, health and wellness, finance, travel, politics, and ideas worth sharing.</p>
-			</a>
-			<a href="/books" class="link-card">
-				<h2>Books</h2>
-				<p>Notes and rankings of the books I've read and recommend.</p>
-			</a>
-			<a href="/travel" class="link-card">
-				<h2>Travel</h2>
-				<p>Stories and advice from experiences traveling around the world.</p>
-			</a>
-			<a href="/work" class="link-card">
-				<h2>Work</h2>
-				<p>Research papers, professional writing, and apps I've built.</p>
-			</a>
-		</div>
-	</section>
-
-	<section class="recent">
-		<h2 class="section-title">Recent Writing</h2>
+	<section class="recent" aria-labelledby="recent-title">
+		<h2 id="recent-title" class="section-title">Recent writing</h2>
 		<ul class="recent-list">
 			{recentPosts.map((post) => (
 				<li>
@@ -73,121 +104,152 @@ const recentPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
 				</li>
 			))}
 		</ul>
-		<a class="recent-all" href="/blog">All posts &rarr;</a>
+		<p class="more-links">
+			More on the <a href="/blog">blog</a>, my <a href="/books">book reviews</a>,
+			<a href="/travel">travel</a>, and <a href="/work">work</a>.
+		</p>
 	</section>
 
-	<section class="connect">
-		<h2 class="section-title">Connect</h2>
-		<div class="connect-links">
+	<section class="connect" aria-labelledby="connect-title">
+		<h2 id="connect-title" class="section-title">Say hi</h2>
+		<p class="connect-links">
 			<a href="mailto:epparshall.gcp@gmail.com">Email</a>
 			<a href="https://www.linkedin.com/in/evanparshall/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 			<a href="https://github.com/epparshall" target="_blank" rel="noopener noreferrer">GitHub</a>
-		</div>
+			<a href="/rss.xml">RSS</a>
+		</p>
 	</section>
 </BaseLayout>
 
 <style>
 	.hero {
-		padding: 1.5rem 0 4rem;
-	}
-
-	.hero-content {
 		display: grid;
-		grid-template-columns: minmax(0, 1fr) 280px;
+		grid-template-columns: minmax(0, 1fr) auto;
 		align-items: center;
-		gap: clamp(2.5rem, 7vw, 5rem);
-	}
-
-	.hero-text {
-		max-width: 640px;
-	}
-
-	.hero-image {
-		position: relative;
-	}
-
-	.hero-image img {
-		width: 280px;
-		height: 280px;
-		object-fit: cover;
-		border-radius: var(--radius);
-		box-shadow: var(--shadow-md);
-		border: 6px solid var(--color-surface);
+		gap: clamp(2rem, 6vw, 4.5rem);
+		padding: 1rem 0 4.5rem;
 	}
 
 	.hero h1 {
-		font-size: clamp(2.75rem, 6vw, 4.5rem);
-		margin-bottom: 1.5rem;
-		letter-spacing: 0;
+		font-size: clamp(2.6rem, 6vw, 4rem);
 		line-height: 1.05;
+		margin-bottom: 1.5rem;
 	}
 
 	.hero p {
+		font-family: var(--font-serif);
 		font-size: 1.25rem;
-		color: var(--color-text-light);
-		max-width: 55ch;
-		margin-bottom: 1.5rem;
+		line-height: 1.6;
+		color: var(--color-text);
+		max-width: 56ch;
+		margin-bottom: 1.1rem;
+	}
+
+	.hero-image {
+		width: 240px;
+		height: 240px;
+		object-fit: cover;
+		border-radius: 50%;
 	}
 
 	.section-title {
-		font-size: 0.85rem;
+		font-size: 0.8rem;
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 0.08em;
 		color: var(--color-text-light);
-		margin-bottom: 2rem;
-		border-bottom: 1px solid var(--color-border);
-		padding-bottom: 0.5rem;
-		display: inline-block;
+		margin: 0 0 1.25rem;
 	}
 
-	.links-grid {
+	.featured {
+		margin-bottom: 4.5rem;
+	}
+
+	.featured-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: 1rem;
-		margin-bottom: 5rem;
 	}
 
-	.link-card {
-		position: relative;
-		padding: 1.5rem;
-		background: var(--color-surface);
+	.featured-item {
+		display: flex;
+		flex-direction: column;
+		padding: 1.25rem;
 		border: 1px solid var(--color-border);
 		border-radius: var(--radius);
-		box-shadow: var(--shadow-sm);
-		transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-		text-decoration: none;
-		color: inherit;
+		background: var(--color-surface);
+		color: var(--color-text);
+		transition: border-color 0.2s ease;
 	}
 
-	.link-card:hover {
-		transform: translateY(-3px);
-		box-shadow: var(--shadow-md);
-		border-color: rgba(47, 111, 94, 0.45);
+	.featured-item:hover {
+		border-color: var(--color-accent);
+		color: var(--color-text);
 		opacity: 1;
 	}
 
-	.link-card h2 {
-		margin-top: 0;
-		font-size: 1.25rem;
-		margin-bottom: 0.5rem;
-		color: var(--color-text);
+	/* Every card gets the same media band so the text below lines up across the row. */
+	.featured-media {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 150px;
+		margin: -1.25rem -1.25rem 1rem;
+		background: var(--color-surface-muted);
+		border-bottom: 1px solid var(--color-border);
+		border-radius: var(--radius) var(--radius) 0 0;
+		overflow: hidden;
 	}
 
-	.link-card p {
-		margin-bottom: 0;
+	.featured-media.icon img {
+		width: 88px;
+		height: 88px;
+		border-radius: 20px;
+	}
+
+	.featured-media.cover img {
+		height: 118px;
+		width: auto;
+		border-radius: 3px;
+		box-shadow: var(--shadow-sm);
+	}
+
+	.featured-media.photo img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.featured-label {
+		font-size: 0.75rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--color-accent-warm);
+		margin-bottom: 0.35rem;
+	}
+
+	.featured-title {
+		font-size: 1.25rem;
+		font-weight: 700;
+		line-height: 1.25;
+		margin-bottom: 0.5rem;
+	}
+
+	.featured-blurb {
 		font-size: 0.95rem;
+		line-height: 1.5;
 		color: var(--color-text-light);
 	}
 
 	.recent {
-		margin-bottom: 5rem;
+		margin-bottom: 4.5rem;
 	}
 
 	.recent-list {
 		list-style: none;
 		padding: 0;
-		margin-bottom: 1rem;
+		margin-bottom: 1.25rem;
 		border-top: 1px solid var(--color-border);
 	}
 
@@ -221,9 +283,14 @@ const recentPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
 		color: var(--color-text-light);
 	}
 
-	.recent-all {
+	.more-links {
+		color: var(--color-text-light);
+	}
+
+	.more-links a {
 		font-weight: 600;
-		color: var(--color-accent-strong);
+		text-decoration: underline;
+		text-underline-offset: 0.18em;
 	}
 
 	.connect-links {
@@ -239,96 +306,48 @@ const recentPosts = (await getCollection('blog', ({ data }) => data.draft !== tr
 		background: var(--color-surface);
 		border-radius: var(--radius);
 		padding: 0.45rem 0.8rem;
-		transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+		transition: border-color 0.2s ease;
 	}
 
 	.connect-links a:hover {
-		background: var(--color-accent-soft);
-		border-color: rgba(47, 111, 94, 0.45);
-		color: var(--color-accent-strong);
+		border-color: var(--color-accent);
 		opacity: 1;
 	}
 
 	@media (max-width: 768px) {
 		.hero {
-			padding: 0.75rem 0 2.5rem;
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+			padding: 0.5rem 0 3rem;
 		}
 
-		.hero-content {
-			grid-template-columns: 1fr;
-			text-align: left;
-			gap: 1.75rem;
+		.hero-image {
+			order: -1;
+			width: 140px;
+			height: 140px;
 		}
 
 		.hero h1 {
-			font-size: 2.35rem;
+			font-size: 2.4rem;
 			margin-bottom: 1rem;
 		}
 
 		.hero p {
-			font-size: 1.05rem;
-			line-height: 1.55;
-			margin-bottom: 1rem;
+			font-size: 1.1rem;
 		}
 
-		.hero-image {
-			justify-self: center;
+		.featured-grid {
+			grid-template-columns: 1fr;
 		}
 
-		.hero-image img {
-			width: min(62vw, 220px);
-			height: min(62vw, 220px);
-		}
-
+		.featured,
 		.recent {
-		margin-bottom: 5rem;
-	}
+			margin-bottom: 3rem;
+		}
 
-	.recent-list {
-		list-style: none;
-		padding: 0;
-		margin-bottom: 1rem;
-		border-top: 1px solid var(--color-border);
-	}
-
-	.recent-list li {
-		margin: 0;
-		border-bottom: 1px solid var(--color-border);
-	}
-
-	.recent-list a {
-		display: flex;
-		justify-content: space-between;
-		align-items: baseline;
-		gap: 1rem;
-		padding: 0.9rem 0.25rem;
-		color: var(--color-text);
-	}
-
-	.recent-list a:hover {
-		color: var(--color-accent-strong);
-		opacity: 1;
-	}
-
-	.recent-title {
-		font-weight: 650;
-		font-size: 1.05rem;
-	}
-
-	.recent-list time {
-		flex-shrink: 0;
-		font-size: 0.85rem;
-		color: var(--color-text-light);
-	}
-
-	.recent-all {
-		font-weight: 600;
-		color: var(--color-accent-strong);
-	}
-
-	.connect-links {
-			justify-content: flex-start;
-			gap: 0.75rem;
+		.recent-list a {
+			flex-direction: column;
+			gap: 0.15rem;
 		}
 	}
 </style>

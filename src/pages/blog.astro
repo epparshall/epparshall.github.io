@@ -78,6 +78,7 @@ const allTags = Array.from(
 								timeZone: 'UTC'
 							})}
 						</time>
+						<span class="read-time">{Math.max(1, Math.round((post.body ?? '').split(/\s+/).filter(Boolean).length / 230))} min read</span>
 						{post.data.seriesTitle && post.data.seriesPart && post.data.seriesTotal && (
 							<span class="series-chip">
 								{post.data.seriesTitle} Series {post.data.seriesPart}/{post.data.seriesTotal}
@@ -298,14 +299,12 @@ const allTags = Array.from(
 		border: 1px solid var(--color-border);
 		border-radius: var(--radius);
 		box-shadow: var(--shadow-sm);
-		transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+		transition: border-color 0.2s ease;
 		color: inherit;
 		text-decoration: none;
 	}
 
 	.post-card a:hover {
-		transform: translateY(-3px);
-		box-shadow: var(--shadow-md);
 		border-color: rgba(47, 111, 94, 0.45);
 		background: var(--color-surface);
 		opacity: 1;
@@ -324,6 +323,11 @@ const allTags = Array.from(
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 0.08em;
+		color: var(--color-text-light);
+	}
+
+	.read-time {
+		font-size: 0.85rem;
 		color: var(--color-text-light);
 	}
 
