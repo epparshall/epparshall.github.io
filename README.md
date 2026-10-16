@@ -1,7 +1,7 @@
 <a href="https://epparshall.github.io">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="readme/dark_mode.svg">
-    <img alt="Evan Parshall: ASCII portrait beside a terminal-style summary of role, languages, projects, and contact links" src="readme/light_mode.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="readme/dark_mode.svg?v=3">
+    <img alt="Evan Parshall: ASCII portrait beside a terminal-style summary of role, education, interests, and contact links" src="readme/light_mode.svg?v=3">
   </picture>
 </a>
 
