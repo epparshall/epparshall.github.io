@@ -2,6 +2,7 @@
 title: "Factfulness: Ten Reasons We're Wrong About the World—and Why Things Are Better Than You Think"
 author: "Hans Rosling"
 image: "/images/books/factfulness.jpg"
+rating: 3.5
 ---
 
 I found this one through a ChatGPT recommendation and picked it up from the public library. *Factfulness* is one of the more educational books I have read, and also light enough to read before bed. Rosling wrote it to be accessible, and it shows.

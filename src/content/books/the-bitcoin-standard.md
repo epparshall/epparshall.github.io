@@ -2,6 +2,7 @@
 title: "The Bitcoin Standard: The Decentralized Alternative to Central Banking"
 author: "Saifedean Ammous"
 image: "/images/books/the-bitcoin-standard.jpg"
+rating: 4
 ---
 
 I picked up *The Bitcoin Standard* by Saifedean Ammous thinking it would be a technical book about how Bitcoin actually works. The protocols, the mining, the consensus mechanisms, the cryptography. It turns out the book is barely about any of that. It is primarily an economic and historical argument about why Bitcoin matters, framed through the lens of monetary history. Once I got over the surprise, I actually loved the book. If you want to understand the philosophical case for Bitcoin, this is the book to read. If you want to understand how Bitcoin works under the hood, you need to look elsewhere.

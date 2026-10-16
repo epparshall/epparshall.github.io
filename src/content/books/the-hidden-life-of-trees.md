@@ -2,6 +2,7 @@
 title: "The Hidden Life of Trees: What They Feel, How They Communicate—Discoveries from a Secret World"
 author: "Peter Wohlleben"
 image: "/images/books/the-hidden-life-of-trees.jpg"
+rating: 3.5
 ---
 
 *The Hidden Life of Trees* by Peter Wohlleben is one of those books that quietly changes how you walk through the world. Wohlleben is a German forester who spent over twenty years working in the forestry industry before leaving to manage a more ecologically minded forest in the Eifel mountains. The book is his attempt to share what twenty years of careful observation taught him about how forests actually work, and it makes you realize how much is happening in a forest that the average person walks right past.

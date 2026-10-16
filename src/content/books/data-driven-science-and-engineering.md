@@ -2,6 +2,7 @@
 title: "Data-Driven Science and Engineering: Machine Learning, Dynamical Systems, and Control"
 author: "Steven L. Brunton, J. Nathan Kutz"
 image: "/images/books/data-driven-science-and-engineering.jpg"
+rating: 4
 ---
 
 Steve Brunton is the man. His YouTube channel got me genuinely excited about controls and applied math and is a big reason I went to graduate school for it. *Data-Driven Science and Engineering: Machine Learning, Dynamical Systems, and Control* is the textbook he wrote with Nathan Kutz, and the best part is that the [full PDF is free and legal](https://databookuw.com/databookV2.pdf). The authors also put up companion video lectures for almost every chapter, and most chapters have their own dedicated playlist on YouTube. If you want to seriously learn this material, the combination of the book plus the lectures is probably the best free resource out there.

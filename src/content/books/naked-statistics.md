@@ -2,6 +2,7 @@
 title: "Naked Statistics: Stripping the Dread from the Data"
 author: "Charles Wheelan"
 image: "/images/books/naked-statistics.jpg"
+rating: 3
 ---
 
 *Naked Statistics: Stripping the Dread from the Data* by Charles Wheelan is the kind of book I wish I had read when I was taking statistics. It is a casual, easy to read tour through the most important concepts in statistics, told with enough humor and real world examples that you do not need to be hunched over a notebook to follow along. I could read this one before bed or during lunch and still walk away learning something, which is rare for a math book.

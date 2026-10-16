@@ -2,6 +2,7 @@
 title: "Outlive: The Science and Art of Longevity"
 author: "Peter Attia"
 image: "/images/books/outlive.jpg"
+rating: 5
 ---
 
 My parents were gifted this book. I found it on their shelf and read the whole thing. I have been begging them to read *Outlive* ever since.

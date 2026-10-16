@@ -2,6 +2,7 @@
 title: "The Culture Map: Breaking Through the Invisible Boundaries of Global Business"
 author: "Erin Meyer"
 image: "/images/books/the-culture-map.jpg"
+rating: 3.5
 ---
 
 I saw this book recommended on LinkedIn and figured it was worth a read given I work with a lot of diverse people and love to travel. *The Culture Map* by Erin Meyer is a guide to understanding how culture shapes the way people communicate, give feedback, build trust, make decisions, and disagree. Meyer is a professor at INSEAD, and the book is built around eight scales that map how different cultures handle different parts of business and communication. The visuals are honestly one of my favorite parts. She gives you a clean chart for each scale showing where different countries fall, and you can immediately see why a Dutch colleague might come across as rude to an American or why a Japanese manager might think their American counterpart is being childish.

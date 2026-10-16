@@ -2,6 +2,7 @@
 title: "The Gene: An Intimate History"
 author: "Siddhartha Mukherjee"
 image: "/images/books/the-gene.jpg"
+rating: 4.5
 ---
 
 The thing I love about Mukherjee is that he takes deeply technical topics and not only makes them understandable, but turns them into stories you actually want to keep reading. *The Gene* is a perfect example. It is part science book, part history book, part memoir, and somehow all three at once. By the time you finish the book, you feel like you have lived through the whole arc of how humans came to understand heredity. But the bigger lesson I took from this book is something I did not expect going in: how much political and financial motivations shape what we call science.

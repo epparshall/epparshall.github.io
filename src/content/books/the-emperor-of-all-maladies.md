@@ -2,6 +2,7 @@
 title: "The Emperor of All Maladies: A Biography of Cancer"
 author: "Siddhartha Mukherjee"
 image: "/images/books/the-emperor-of-all-maladies.jpg"
+rating: 4.5
 ---
 
 Another great read by Siddhartha Mukherjee. After loving *The Gene*, I picked this one up wanting to see how he would tackle cancer, and he does not disappoint. *The Emperor of All Maladies* won a Pulitzer in 2011, and you can see why. It is part history, part science, part memoir from his time as an oncology fellow, and it reads like a story even though the subject is one of the heaviest you can imagine.

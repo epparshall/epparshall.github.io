@@ -2,6 +2,7 @@
 title: "How Not to Age: The Scientific Diet to Live Longer and Healthier"
 author: "Michael Greger"
 image: "/images/books/how-not-to-age.jpg"
+rating: 5
 ---
 
 I came across *How Not to Age* by Dr. Michael Greger at the public library while browsing the large-print nonfiction shelf. I love large-print books because they make me feel like I read faster than I actually do. The title caught my eye, and figuring that the sooner I learned this stuff the better, I picked it up. Greger is a physician and the founder of NutritionFacts.org, where he reviews nutrition research weekly. He is also famously thorough about his sources, which is probably the single best thing I can say about him as a writer.

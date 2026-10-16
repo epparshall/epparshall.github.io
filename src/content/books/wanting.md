@@ -2,6 +2,7 @@
 title: "Wanting: The Power of Mimetic Desire in Everyday Life"
 author: "Luke Burgis"
 image: "/images/books/wanting.jpg"
+rating: 3
 ---
 
 *Wanting: The Power of Mimetic Desire in Everyday Life* by Luke Burgis has one of the more interesting premises of any book I have read. How much of what you want is actually yours? That question sounds simple, but the longer you sit with it, the more uncomfortable it gets. It is also one of those questions that psychology and philosophy have been circling for decades, and Burgis takes a real shot at answering it.

@@ -2,6 +2,7 @@
 title: "Blind Spots: When Medicine Gets It Wrong, and What It Means for Our Health"
 author: "Marty Makary"
 image: "/images/books/blind-spots.jpg"
+rating: 4
 ---
 
 Reading Mukherjee's *The Gene* and *The Emperor of All Maladies* left me with a question I could not shake. Both books trace how politics, ego, and institutional power shaped what got called science. I kept wondering how much of that was still happening today, dressed up in modern credentialing and peer review. This book is exactly that question answered.

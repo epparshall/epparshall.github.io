@@ -2,6 +2,7 @@
 title: "Why We Sleep: Unlocking the Power of Sleep and Dreams"
 author: "Matthew Walker"
 image: "/images/books/why-we-sleep.jpg"
+rating: 4.5
 ---
 
 *Why We Sleep* by Matthew Walker is one of those books I think most people in the United States could gain a lot from reading. Walker is a professor of neuroscience and psychology at UC Berkeley, and his core argument is simple: sleep is not optional. Almost every system in your body, your brain, your heart, your immune system, your metabolism, your mood, your memory, degrades when you cut sleep short. And these days a lot of us are cutting it short.

@@ -2,6 +2,7 @@
 title: "Why Nations Fail: The Origins of Power, Prosperity, and Poverty"
 author: "Daron Acemoglu and James A. Robinson"
 image: "/images/books/why-nations-fail.jpg"
+rating: 5
 ---
 
 Why exactly do nations fail? A friend recommended *Why Nations Fail* to me after hearing the authors shared a Nobel Prize for their work, and the question stuck with me before I even cracked it open.

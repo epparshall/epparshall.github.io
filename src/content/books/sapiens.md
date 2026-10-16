@@ -2,6 +2,7 @@
 title: "Sapiens: A Brief History of Humankind"
 author: "Yuval Noah Harari"
 image: "/images/books/sapiens.jpg"
+rating: 4
 ---
 
 I was assigned to read one chapter of *Sapiens* by Yuval Noah Harari for my macroeconomics class in college. I cracked it open expecting a dry econ textbook excerpt, got hooked within a few pages, and ended up reading the whole book. Harari is a history professor at the Hebrew University of Jerusalem and the book is based on his undergraduate world history lectures. The whole thing is structured around three revolutions that he argues shaped everything about who we are today: the Cognitive Revolution about 70,000 years ago, the Agricultural Revolution about 12,000 years ago, and the Scientific Revolution about 500 years ago.

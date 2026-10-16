@@ -2,6 +2,7 @@
 title: "A Random Walk Down Wall Street: The Time-Tested Strategy for Successful Investing"
 author: "Burton G. Malkiel"
 image: "/images/books/a-random-walk-down-wall-street.jpg"
+rating: 4.5
 ---
 
 I borrowed *A Random Walk Down Wall Street* by Burton Malkiel from my roommate, who was assigned it for a class and (sadly) never finished it. He should have. This is the kind of book that every young person needs to read, especially in an era where most people my age would rather get rich quick on the next meme stock than build wealth slowly. Malkiel is a Princeton economist who first published this book in 1973, and the core argument has held up so well that he is now on the 13th edition, released in 2023 for the 50th anniversary. One of the strongest things you can say about any book is that it has withstood the test of time, and *A Random Walk Down Wall Street* certainly has.

@@ -2,6 +2,7 @@
 title: "Breath: The New Science of a Lost Art"
 author: "James Nestor"
 image: "/images/books/breath.jpg"
+rating: 4
 ---
 
 I found *Breath* by James Nestor at my parents' house and picked it up out of pure curiosity. How can you write an entire book about breathing? Turns out there is a lot to say. Nestor is a journalist, not a doctor or scientist, which is both the book's biggest strength and its biggest weakness. The strength is that the book reads like a story. He travels the world meeting researchers, doctors, and what he calls "pulmonauts" (his term for people who have spent their lives obsessing over breathing) and the writing has the pace of a good piece of investigative journalism. The weakness is that some claims are presented with more confidence than the underlying science actually warrants.

@@ -2,6 +2,7 @@
 title: "Fluent Forever: How to Learn Any Language Fast and Never Forget It"
 author: "Gabriel Wyner"
 image: "/images/books/fluent-forever.jpg"
+rating: 3.5
 ---
 
 My mom gifted me *Fluent Forever* by Gabriel Wyner because she knows I love learning foreign languages. Wyner is an interesting author for a language book. He was an opera singer before he was a polyglot, and the book grew out of his real problem of needing to sing in languages he did not actually speak. He now claims fluency in seven languages, all self-taught using the system he describes in this book. The methods are built around three core ideas: learn pronunciation before vocabulary, never translate (think in images instead), and use spaced repetition systems like Anki to make new vocabulary stick. Each of these is backed by real cognitive science and each one runs counter to how most people are taught languages in school.

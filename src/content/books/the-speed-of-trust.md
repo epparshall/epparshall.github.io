@@ -2,6 +2,7 @@
 title: "The Speed of Trust: The One Thing That Changes Everything"
 author: "Stephen M. R. Covey"
 image: "/images/books/the-speed-of-trust.jpg"
+rating: 4.5
 ---
 
 I picked up *The Speed of Trust* by Stephen M.R. Covey after seeing it referenced in *The 7 Habits of Highly Effective People*. Turns out the author is the son of the man who wrote *7 Habits*, Stephen R. Covey, and you can feel it. The book is essentially an extension of his father's work, taking the idea of trust and building a whole framework around it. The book repeats itself a fair amount, but I think that is part of the point. Some ideas only really sink in once you have seen them from five different angles.

@@ -2,6 +2,7 @@
 title: "Behave"
 author: "Robert Sapolsky"
 image: "/images/books/behave.jpg"
+rating: 5
 ---
 
 The title of this book caught my eye. *Behave: The Biology of Humans at Our Best and Worst*. Reflecting on it now, I think it is more than just a book on biology. I would say it bridges what we know about human biology and human psychology, with a hint of anthropology and philosophy mixed in there.

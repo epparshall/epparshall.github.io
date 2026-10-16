@@ -2,6 +2,7 @@
 title: "The Richest Man in Babylon"
 author: "George S. Clason"
 image: "/images/books/the-richest-man-in-babylon.jpg"
+rating: 3.5
 ---
 
 *The Richest Man in Babylon* by George Clason is the kind of book that almost everyone should read once, especially if you have never been taught the basics of personal finance. It was written in 1926, and the way it teaches is genuinely clever. Instead of laying out financial advice as rules or formulas, Clason tells a series of parables set in ancient Babylon, where wealthy men explain to apprentices how they built and protected their fortunes. The structure is a little corny in places (everyone talks in a vaguely Old Testament cadence), but the lessons land in a way that lectures never could.

@@ -2,6 +2,7 @@
 title: "Atlas Shrugged"
 author: "Ayn Rand"
 image: "/images/books/atlas-shrugged.jpg"
+rating: 5
 ---
 
 My first real job out of school was in Product Innovation at ZF in Lafayette, Indiana. My boss, Dan Williams, was a big reader, so one day I asked him for book recommendations. He smiled and said *Atlas Shrugged*. I was confused at first. Why only one book? Then I saw the size of *Atlas Shrugged* and understood. It is over 1,000 pages long and the book's most famous monologue (the John Galt speech) is something like 70 pages on its own. This is not a casual read, it’s a real commitment.
