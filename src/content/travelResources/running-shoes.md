@@ -13,7 +13,6 @@ My current travel shoe is the ASICS BlazeBlast. It covers more situations than a
 
 - **Good support for a running shoe:** It is cushioned and supportive enough for a long day of walking on concrete.
 - **Doubles as a trail shoe:** It is built for trails, so it handles a hike or a dirt path without needing a second pair of shoes.
-- **Handles water well:** In my experience they hold up well in rain and on wet ground. ASICS does not sell them as waterproof, though, so do not expect them to keep your feet dry through deep puddles.
 
 ### Why it matters
 
