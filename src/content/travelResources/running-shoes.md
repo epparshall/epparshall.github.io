@@ -5,11 +5,11 @@ description: "One of the most underrated travel upgrades is simply bringing prop
 
 One of the most underrated travel upgrades is simply bringing proper running shoes instead of regular casual sneakers or “tennis shoes.” It sounds minor, but it changes how your whole travel day feels.
 
-When I travel, I prefer shoes like Adidas Ultraboost or Pureboost-style running shoes because they’re built for long periods of impact and walking, not just short daily use.
+For most trips I wear Adidas Ultraboost or Pureboost running shoes. They’re built for long periods of impact and walking, not just short daily use, and they look clean enough for a city.
 
-### What I wear now: ASICS BlazeBlast
+### For lots of walking and some hiking: ASICS BlazeBlast
 
-My current travel shoe is the ASICS BlazeBlast. It covers more situations than a pure road shoe, which is exactly what you want when you only bring one pair.
+When a trip involves a lot of walking and maybe some hiking, I bring the ASICS BlazeBlast instead. It covers more situations than a pure road shoe, which is exactly what you want when you only bring one pair.
 
 - **Good support for a running shoe:** It is cushioned and supportive enough for a long day of walking on concrete.
 - **Doubles as a trail shoe:** It is built for trails, so it handles a hike or a dirt path without needing a second pair of shoes.
@@ -31,4 +31,4 @@ My current travel shoe is the ASICS BlazeBlast. It covers more situations than a
 
 If you’re choosing between casual sneakers and proper running shoes for a trip, running shoes almost always win for comfort. It’s one of those upgrades you only fully appreciate after a full day of walking through airports and cities.
 
-[View the ASICS BlazeBlast on Amazon](https://www.amazon.com/s?k=asics+blazeblast)
+[View Adidas Ultraboost on Amazon](https://www.amazon.com/s?k=adidas+ultraboost) · [View Adidas Pureboost on Amazon](https://www.amazon.com/s?k=adidas+pureboost) · [View the ASICS BlazeBlast on Amazon](https://www.amazon.com/s?k=asics+blazeblast)
