@@ -1,6 +1,6 @@
 ---
 destination: "Peru"
-date: 2026-05-26
+date: 2026-01-15
 description: "Two weeks between jobs: Paracas, Huacachina, Arequipa, Cusco, and a rainy 4 AM hike up to Machu Picchu."
 image: "/images/travel/peru-machu-picchu.jpg"
 ---
