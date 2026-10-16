@@ -21,6 +21,18 @@ const seriesEntries = entry.data.seriesTitle
 		.filter((post) => post.data.seriesTitle === entry.data.seriesTitle)
 		.sort((a, b) => (a.data.seriesPart || 0) - (b.data.seriesPart || 0))
 	: [];
+const evan = { '@type': 'Person', name: 'Evan Parshall', url: 'https://epparshall.github.io' };
+const postJsonLd = {
+	'@type': 'BlogPosting',
+	headline: entry.data.title,
+	description: entry.data.description,
+	url: new URL(`/blog/${entry.id}`, Astro.site).toString(),
+	datePublished: entry.data.pubDate.toISOString().slice(0, 10),
+	author: evan,
+	publisher: evan,
+	...(entry.data.tags && { keywords: entry.data.tags.join(', ') }),
+	...(entry.data.seriesTitle && { isPartOf: { '@type': 'CreativeWorkSeries', name: `${entry.data.seriesTitle} series` } }),
+};
 const currentSeriesIndex = seriesEntries.findIndex((post) => post.id === entry.id);
 const previousSeriesEntry = currentSeriesIndex > 0 ? seriesEntries[currentSeriesIndex - 1] : null;
 const nextSeriesEntry = currentSeriesIndex >= 0 && currentSeriesIndex < seriesEntries.length - 1
@@ -33,6 +45,7 @@ const nextSeriesEntry = currentSeriesIndex >= 0 && currentSeriesIndex < seriesEn
 	description={entry.data.description}
 	type="article"
 	publishedDate={entry.data.pubDate}
+	jsonLd={postJsonLd}
 >
 	<article class="blog-post">
 		<header>

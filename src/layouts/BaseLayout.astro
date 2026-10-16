@@ -7,6 +7,8 @@ interface Props {
 	image?: string;
 	type?: 'website' | 'article';
 	publishedDate?: Date;
+	/** Extra schema.org structured data for this page (a Review, a BlogPosting, ...). */
+	jsonLd?: Record<string, unknown>;
 }
 
 const siteDescription = 'Personal website of Evan Parshall, a software engineer in Westfield, Indiana, featuring writing on technology, books, travel, publications, and projects.';
@@ -16,6 +18,7 @@ const {
 	image = '/og-image.png',
 	type = 'website',
 	publishedDate,
+	jsonLd,
 } = Astro.props;
 const siteUrl = 'https://epparshall.github.io';
 const pageTitle = title === 'Home' ? 'Evan Parshall | Software Engineer' : `${title} | Evan Parshall`;
@@ -79,6 +82,9 @@ const isActive = (href: string) => currentPath === href || currentPath.startsWit
 		  }
 		}
 		</script>
+		{jsonLd && (
+			<script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', ...jsonLd }).replace(/</g, '\\u003c')} />
+		)}
 		<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d460b89e55754f0dabee6beb4ff217b2"}'></script><!-- End Cloudflare Web Analytics -->
 		<script is:inline>
 			document.addEventListener('click', (event) => {

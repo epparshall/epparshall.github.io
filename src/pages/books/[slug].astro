@@ -23,13 +23,39 @@ const rank = rankIndex !== -1 ? rankIndex + 1 : null;
 const isHonorableMention = honorableMentionsOrder.includes(entry.id);
 const shortTitle = entry.data.title.split(':')[0];
 const buyUrl = amazonBookUrl(shortTitle, entry.data.author);
+const pageUrl = new URL(`/books/${entry.id}`, Astro.site).toString();
+const evan = { '@type': 'Person', name: 'Evan Parshall', url: 'https://epparshall.github.io' };
+
+// Tells search engines this page is a review of a specific book. Google only shows
+// review stars when reviewRating is present, so set `rating` in a book's frontmatter
+// to get them.
+const reviewJsonLd = {
+	'@type': 'Review',
+	name: `${shortTitle} by ${entry.data.author}: Book Review`,
+	url: pageUrl,
+	author: evan,
+	publisher: evan,
+	itemReviewed: {
+		'@type': 'Book',
+		name: entry.data.title,
+		author: entry.data.author
+			.split(/,\s*|\s+and\s+/)
+			.map((name) => ({ '@type': 'Person', name })),
+		...(entry.data.image && { image: new URL(entry.data.image, Astro.site).toString() }),
+	},
+	...(entry.data.rating && {
+		reviewRating: { '@type': 'Rating', ratingValue: entry.data.rating, bestRating: 5, worstRating: 1 },
+	}),
+	...(entry.data.finishDate && { datePublished: entry.data.finishDate.toISOString().slice(0, 10) }),
+};
 ---
 
 <BaseLayout
-	title={shortTitle}
+	title={`${shortTitle} by ${entry.data.author}: Book Review`}
 	description={`Evan Parshall's review of ${shortTitle} by ${entry.data.author}: what stuck, what did not, and who should read it.`}
 	image={entry.data.image}
 	type="article"
+	jsonLd={reviewJsonLd}
 >
 	<article class="book-detail">
 		<header>
