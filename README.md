@@ -9,6 +9,8 @@
 
 Evan Parshall's personal website, built with [Astro](https://astro.build) and deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push to `main`.
 
+Working on this site with an AI agent? `AGENTS.md` has the writing style, design decisions, and conventions it needs (`CLAUDE.md` points to it).
+
 ## Commands
 
 | Command           | Action                                      |
