@@ -13,9 +13,11 @@ Sun on the road adds up fast. You are outside far more than you are at home, oft
 - **SPF 50, mineral based:** It uses micro-fine zinc oxide for broad-spectrum UVA and UVB protection.
 - **Lightweight and non-greasy:** It absorbs quickly and does not leave a white cast, so it does not feel like you are wearing beach sunscreen on your face.
 - **Carry-on friendly:** The bottle is 3 ounces, under the 3.4 ounce TSA limit, so it goes in your liquids bag without a second thought.
+- **HSA eligible (Americans only):** Broad-spectrum sunscreen with SPF 15 or higher counts as an HSA and FSA expense, so you can pay for it with pre-tax money.
 
 ### Small tradeoffs
 
+- It is not water resistant. If you are swimming or sweating, this is not going to cut it. Use a water-resistant sunscreen like a [clip-on SPF 50](/travel/resources/clip-on-sunscreen/) for those days.
 - It is a face product, so you still need regular sunscreen for your arms, neck, and legs on beach or hiking days.
 - Like any sunscreen, it wears off. Reapply every couple of hours if you are out in strong sun.
 
